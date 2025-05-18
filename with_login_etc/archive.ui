@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>archive</class>
+ <widget class="QDialog" name="archive">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>987</width>
+    <height>545</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+    background-color: rgb(76, 177, 255);
+}
+QDialog &gt; QWidget {
+    background: transparent;
+}</string>
+  </property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0">
+    <widget class="QPushButton" name="pushButton">
+     <property name="minimumSize">
+      <size>
+       <width>300</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: rgb(76, 177, 255);  /* цвет кнопки */
+    color: rgb(255, 255, 255);           /* цвет текста */
+    border: 2px solid rgb(255, 255, 255); /* белая обводка 2px */
+    border-radius: 10px; 
+    padding: 5px;                        /* отступ внутри кнопки */
+}
+
+QPushButton:hover {
+    background-color: rgb(221, 221, 221); /* при наведении */
+    border: 2px solid rgb(255, 255, 255); /* сохраняем обводку */
+}
+
+QPushButton:pressed {
+    background-color: rgb(0, 170, 255);   /* при нажатии */
+    border: 2px solid rgb(255, 255, 255); /* сохраняем обводку */
+    padding-top: 7px;                     /* эффект &quot;вдавливания&quot; */
+    padding-bottom: 5px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Ввести часы наработки</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableView {
+    background-color: white;              /* Белый фон таблицы */
+    gridline-color: rgb(76, 177, 255);    /* Голубые линии сетки */
+    border: 3px solid rgb(76, 177, 255);  /* Толстая голубая рамка */
+}
+
+/* Заголовки колонок */
+QHeaderView::section {
+    background-color: rgb(76, 177, 255);  /* Голубой фон */
+    color: white;                         /* Белый текст */
+    font-weight: bold;
+    padding: 5px;
+    border: 1px solid rgb(50, 150, 230);  /* Граница секций */
+}
+
+/* Строки таблицы */
+QTableView::item {
+    color: black;                         /* Чёрный текст */
+    background-color: white;              /* Белый фон строк */
+    border-bottom: 1px solid rgb(230, 230, 230); /* Разделитель строк */
+}
+
+/* Выделенная строка */
+QTableView::item:selected {
+    background-color: rgb(200, 220, 255);  /* Светло-голубой при выделении */
+    color: black;
+}
+</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>Дата</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <italic>true</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Часы наработки</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Произведённые работы</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Комментарии</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
